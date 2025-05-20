@@ -1,0 +1,6 @@
+.idea/
+MyFingData/
+SOCOFingData/
+
+.pytest_cache/
+__pycache__/
