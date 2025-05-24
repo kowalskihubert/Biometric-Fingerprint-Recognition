@@ -1,4 +1,7 @@
-from src.kmm import kmm_thinning
+from src.stitching.kmm import kmm_thinning
+from src.stitching.morphorogical_skeletonization import morphological_skeletonization
+import numpy as np
+import cv2
 
 def test_kmm_thinning(input_path, output_path, apply_preprocessing=False, apply_postprocessing=False):
     """
@@ -59,4 +62,11 @@ if __name__ == "__main__":
     # test_kmm_thinning("example2.bmp", "example2_thinned_original.bmp")
 
     # Test KMM thinning with enhancements
-    test_kmm_with_enhancements("example2.bmp", "example2_thinned_enhanced.bmp")
+    test_kmm_with_enhancements("data/example2.bmp", "data/example2_thinned_enhanced.bmp")
+    
+    test_image = cv2.imread("data/example2.bmp", cv2.IMREAD_GRAYSCALE)
+    skeleton_result = morphological_skeletonization(test_image)
+
+    # Wyświetl wyniki
+    cv2.imshow("Oryginalny Obraz Binarny", test_image)
+    cv2.imshow("Szkielet Morfologiczny", skeleton_result)
