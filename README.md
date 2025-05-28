@@ -1,6 +1,6 @@
 # Fingerprint Image Thinning with KMM Algorithm
 
-This repository contains an implementation of the KMM (Kang-Wang-Morelli) algorithm for thinning binary images, particularly effective for fingerprint images. The implementation includes morphological enhancement techniques to improve the quality of thinned images.
+This repository contains an implementation of the KMM algorithm for thinning binary images, particularly effective for fingerprint images. The implementation includes morphological enhancement techniques to improve the quality of thinned images. We also include our implementations of popular algorithms to detect minutiaes on fingerprint images, such as Crossing Number and Poincaré index method.
 
 ## Features
 
@@ -11,6 +11,10 @@ This repository contains an implementation of the KMM (Kang-Wang-Morelli) algori
 - Postprocessing techniques to enhance thinned images:
   - Morphological closing to connect nearby endpoints
   - Gap bridging to connect broken segments
+- Crossing Number algorithm
+  - Detecting bifurcations and endings
+- Poincaré index method
+  - Detecting cores and deltas
 
 ## Requirements
 
@@ -18,6 +22,10 @@ This repository contains an implementation of the KMM (Kang-Wang-Morelli) algori
 - NumPy
 - PIL (Python Imaging Library)
 - OpenCV (cv2)
+
+## Demonstration
+
+To see those algorithms in action review our experiments included in `demonstration.ipynb` Jupyter Notebook. 
 
 ## Usage
 
