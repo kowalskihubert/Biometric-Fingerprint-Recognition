@@ -4,3 +4,7 @@ SOCOFingData/
 
 .pytest_cache/
 __pycache__/
+
+
+.ipynb_checkpoints/
+anaconda_projects/
